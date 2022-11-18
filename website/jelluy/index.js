@@ -10,7 +10,7 @@ function startWeb() {
   <button class="bg-sky-500 hover:bg-sky-700" onclick="website()">Start making a website</button>
  </main>
  `, `
- <script src="https://cdn.tailwindcss.com"></script>
+ <script src="https://cdn.tailwindcss.com"></` + script>`
  <script>
     tailwind.config = {
       theme: {
@@ -26,7 +26,7 @@ function startWeb() {
         }
       }
     }
- </script>
+ </` + `script>
  `); 
 }
 startWeb();

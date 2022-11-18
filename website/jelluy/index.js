@@ -4,7 +4,7 @@ function website() {
 function startWeb() {
  jelluy.startSite(`
  <main class="bg-blua">
-  <h1 class="text-3xl font-bold text-center text-red">
+  <h1 class="text-3xl font-bold text-center text-white">
     Welcome to jelluy docs
   </h1>
   <button class="bg-sky-500 hover:bg-sky-700" onclick="website()">Start making a website</button>

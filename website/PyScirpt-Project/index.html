@@ -16,14 +16,22 @@ Code, Compile, Run and Debug online from anywhere in world.
             - numpy
             - matplotlib
             - paths:
-                - ./main.py
+                - ./db.py
         </py-env>
     </head>
     <body>
       <h1>Database CDN</h1>
+      <p>Since this project is open source you can make extensions</p>
+      <p id="data">
+
+      </p>
+      <button id="butto"></button>
       <py-script>
+import db
 from js import document
-      <py-script>
+document.getElementById("data").innerHTML = db.save("People", ["Hi", "Test"])
+document.getElementById("butto").innerHTML = db.get(1)
+      </py-script>
     </body>
 </html>
 

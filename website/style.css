@@ -3,7 +3,7 @@ body {
   display: grid;
 }
 #main {
-  background-image: linear-gradient(red,yellow,purple);
+  background-image: linear-gradient(red,blue,purple);
 }
 h1 {
   font-weight: bold;

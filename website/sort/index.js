@@ -20,7 +20,8 @@ var links = [
 "S",
 "H",
 "C",
-"D"
+"D",
+"P"
 ]
 links.sort()
 console.log(links)

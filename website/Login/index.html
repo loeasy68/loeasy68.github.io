@@ -12,8 +12,8 @@
         </py-env>
     </head>
     <body>
-      <h1>Database CDN</h1>
-      <p>Since this project is open source you can make extensions</p>
+      <h1>Login test</h1>
+      <input id="name" placeholder="Enter name">
       <p id="data">
 
       </p>
@@ -21,8 +21,9 @@
       <py-script>
 import db
 from js import document
-document.getElementById("data").innerHTML = db.save("People", ["Hi", "Test"])
-document.getElementById("butto").innerHTML = db.get(1)
+from js import alert
+db.save("People", ["Hi", "Test"])
+
       </py-script>
     </body>
 </html>

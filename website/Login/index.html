@@ -18,7 +18,6 @@
       <py-script>
 import db
 from js import document
-from js import alert
 
 from pyodide import create_proxy
 
@@ -29,7 +28,7 @@ def comp(event):
     if inp == db.get(0):
         document.contenteditable = "true"
     if inp == db.get(1):
-        alert("Done")
+        document.write("Done")
 cc = create_proxy(comp)
 document.getElementById("done").addEventListener("click",cc)
       </py-script>

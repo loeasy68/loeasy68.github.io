@@ -29,7 +29,7 @@ def comp(event):
         document.contenteditable = "true"
     if inp == db.get(1):
         document.write("Done")
-cc = create_proxy(comp)
+cc = pyodide.ffi.create_proxy(comp)
 document.getElementById("done").addEventListener("click",cc)
       </py-script>
     </body>

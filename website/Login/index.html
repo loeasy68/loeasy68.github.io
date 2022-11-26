@@ -14,16 +14,24 @@
     <body>
       <h1>Login test</h1>
       <input id="name" placeholder="Enter name">
-      <p id="data">
-
-      </p>
-      <button id="butto"></button>
+      <button id="done">Done</button>
       <py-script>
 import db
 from js import document
 from js import alert
-db.save("People", ["Hi", "Test"])
 
+from pyodide import create_proxy
+
+db.save("Users", ["content", "Lovgn"])
+
+def comp(event):
+    inp = document.getElementById("name").value
+    if inp == db.get(0):
+        document.contenteditable = "true"
+    if inp == db.get(1):
+        alert("Done")
+cc = create_proxy(comp)
+document.getElementById("done").addEventListener("click",cc)
       </py-script>
     </body>
 </html>

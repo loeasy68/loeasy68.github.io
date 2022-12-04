@@ -5,9 +5,11 @@
   </head>
   <body>
     <script>
-      const urlParams = new URLSearchParams("https://example.com/" + window.location.search);
-      document.write(urlParams.get('html'))
-     
+      function getParameter(parameterName) {
+        let parameters = new URLSearchParams(window.location.search)
+        return parameters.get(parameterName)
+      }
+      document.write(getParameter("html"))
     </script>
   </body>
 </html>

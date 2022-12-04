@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Title of the Document</title>
+  </head>
+  <body>
+    <script>
+      const urlParams = new URLSearchParams(document.url);
+      if(urlParams.get('home') == true) {
+          window.open('./../website/index.html')
+      }
+    </script>
+  </body>
+</html>

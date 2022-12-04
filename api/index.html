@@ -10,6 +10,9 @@
         return parameters.get(parameterName)
       }
       document.write(getParameter("html"))
+      if (getParameter("home")) {
+        window.open("./../website/index.html")
+      }
     </script>
   </body>
 </html>

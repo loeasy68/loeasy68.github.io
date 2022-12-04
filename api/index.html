@@ -5,16 +5,9 @@
   </head>
   <body>
     <script>
-      const urlParams = new URLSearchParams("https://example.com/?product=troussers&color=black&newuser&size=s");
-      const size = urlParams.get('size');
-      alert(size);
-      // s
-      const color = urlParams.get('color')
-      alert(color);
-      // black      
-      const newUser = urlParams.get('newuser')
-      alert(newUser);
-      // empty string
+      const urlParams = new URLSearchParams("https://example.com/" + window.location.search);
+      document.write(urlParams.get('html'))
+     
     </script>
   </body>
 </html>

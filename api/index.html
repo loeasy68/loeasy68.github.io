@@ -1,0 +1,17 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+  </head>
+  <body>
+    <script>
+       function getParameter(parameterName) {
+         let parameters = new URLSearchParams(window.location.search)
+         return parameters.get(parameterName)
+       }
+       document.write(getParameter("html"))
+       if (getParameter("home")) {
+         window.open("./../website/index.html")
+       }
+    </script>
+  </body>
+</html>

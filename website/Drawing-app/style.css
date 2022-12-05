@@ -13,6 +13,7 @@ body{
 #sketchcontainer{
     width: 100%;
     margin-right: auto;
+    touch-action: none;
 }
 
 .line1{

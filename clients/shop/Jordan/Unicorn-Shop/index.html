@@ -7,5 +7,13 @@
     <label>Product name:<input id="pn"></label><br>
     <label>Product image:<input id="pi" type="upload"></label><br>
     <label>Product Description:<input id="pd"></label><br>
+    <button onclick="make()">Make Product</button>
+    <div id="link"></div>
+    <script>
+        function make() {
+            let lin = `https://loeasy68.github.io/clients/shop/shop.html?pn=${pn}&pi=${pi}&pd=${pd}`
+            link.innerHTML = lin
+        }
+    </script>
   </body>
 </html>

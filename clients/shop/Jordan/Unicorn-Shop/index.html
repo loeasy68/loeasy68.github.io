@@ -10,8 +10,21 @@
     <button onclick="make()">Make Product</button>
     <div id="link"></div>
     <script>
+        let pim = ""
+        pi.addEventListener('change', (e) => {
+          // Get a reference to the file
+          const file = e.target.files[0];
+
+          // Encode the file using the FileReader API
+          const reader = new FileReader();
+          reader.onloadend = () => {
+              pim = reader.result
+            // Logs data:<type>;base64,wL2dvYWwgbW9yZ...
+            };
+          reader.readAsDataURL(file);
+        });
         function make() {
-            let lin = `https://loeasy68.github.io/clients/shop/shop.html?pn=${pn.value}&pi=${pi.value}&pd=${pd.value}`
+            let lin = `https://loeasy68.github.io/clients/shop/shop.html?pn=${pn.value}&pi=${pim.value}&pd=${pd.value}`
             link.innerHTML = lin
         }
     </script>

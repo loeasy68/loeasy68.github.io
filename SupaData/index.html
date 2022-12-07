@@ -29,9 +29,9 @@ Code, Compile, Run and Debug online from anywhere in world.
 import code
 from pyodide import create_proxy     
 from js import document
+cc = create_proxy(main)
 def main():
     code.start(document.getElementById("tn").value)
-cc = pyodide.create_proxy(main)
 document.getElementById("don").addEventListener("click", cc)
     
       </py-script>

@@ -21,15 +21,19 @@ Code, Compile, Run and Debug online from anywhere in world.
         </py-env>
     </head>
     <body>
-      <h1>Database CDN</h1>
-      <p>Since this project is open source you can make extensions</p>
-      <p id="data">
-
-      </p>
+      <h1>SupaData</h1>
+      <p>SupaData for fast database(Inspired by SupaBase)</p>
+      <label>Table name</label><input id="tn"><br>
+      <button id="don">Done</button>
       <button id="butto"></button>
       <py-script>
 import code
-code.start()
+from pyodide import create_proxy     
+from js import document
+def main():
+    code.start(document.getElementById("tn").value)
+cc = create_proxy(main)
+document.getElementById("don").addEventListener("click", cc)
     
       </py-script>
     </body>

@@ -17,6 +17,7 @@ Code, Compile, Run and Debug online from anywhere in world.
             - matplotlib
             - paths:
                 - ./db.py
+                -./main.py
         </py-env>
     </head>
     <body>
@@ -27,10 +28,8 @@ Code, Compile, Run and Debug online from anywhere in world.
       </p>
       <button id="butto"></button>
       <py-script>
-import db
-from js import document
-document.getElementById("data").innerHTML = db.save("People", ["Hi", "Test"])
-document.getElementById("butto").innerHTML = db.get(1)
+main.start()
+    
       </py-script>
     </body>
 </html>

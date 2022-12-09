@@ -1,8 +1,10 @@
 let os = prompt("What is your OS")
-let homeDir = ""
+let vidTubeURL = "/media/removable/Code/code/VidTube/index.html"
+let vidTubeMac = "/Volumes/Code/code/VidTube/index.html"
+vidTubeURL = (os == "MacOS") ? vidTubeMac : vidTubeURL;
 if (os = "ChromeOS") {
  homeDir = "/"
 }
 function vidTube() {
- result.innerHTML = homeDir + "media/removable/Code/code/VidTube/index.html"
+ result.innerHTML = vidTubeURL
 }

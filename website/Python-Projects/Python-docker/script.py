@@ -5,7 +5,13 @@ app = Flask(__name__)
 
 @app.route("/")
 def home():
-    return "<h1>LoGoat</h1>"
+    return f"""
+    <h1>LoGoat</h1>
+    <p>A highly inscure web application</p>
+    <a href="{url_for("xss")}">Cross Site scripting</a>
+    """
+
+@app.
 
 @app.route("/<name>")
 def user(name):

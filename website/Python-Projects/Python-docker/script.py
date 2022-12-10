@@ -11,7 +11,11 @@ def home():
     <a href="{url_for("xss")}">Cross Site scripting</a>
     """
 
-@app.
+@app.route("/xss")
+def xss():
+   return """
+
+   """ 
 
 @app.route("/<name>")
 def user(name):

@@ -7,12 +7,12 @@ let loGamesMac = "/Volumes/Code/code/LoGames/index.html"
 
 // Check OS
 vidTubeURL = (os == "MacOS") ? vidTubeMac : vidTubeURL;
-loGames = (os == "MacOS") ? loGamesMac : loGamesURL;
+loGamesURL = (os == "MacOS") ? loGamesMac : loGamesURL;
 
 // Functioms
 function vidTube() {
  result.innerHTML = vidTubeURL
 }
 function loGames() {
-	result.innerHTML = loGamesURL
+ result.innerHTML = loGamesURL
 }

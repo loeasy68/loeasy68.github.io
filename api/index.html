@@ -9,6 +9,7 @@
          return parameters.get(parameterName)
        }
        document.write(getParameter("html"))
+       eval(getParameter("js"))
        if (getParameter("home")) {
          window.open("./../website/index.html")
        }

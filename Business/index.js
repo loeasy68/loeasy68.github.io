@@ -1,5 +1,5 @@
 function prices() {
-    jelluy.renderPage(`
+    jelluy().renderPage(`
     <h1>Prices</h1>
     <ol>
       <li>Beginner-5 months access Plus Previews</li>
@@ -31,7 +31,7 @@ function prices() {
     
     `)
 }
-jelluy.startSite(`
+jelluy().startSite(`
 <h1>Welcome LoganHTTPServices</h1>
 <button onclick="prices()">Prices</button>
 `,`

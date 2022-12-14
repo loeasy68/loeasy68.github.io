@@ -10,11 +10,12 @@
 
         <script>
         function done() {
+            // Encode numbers for saving
             if (parseInt(code.value) == 791201) {
             result.innerHTML = `
 <h1>Bank</h1>
 
-<a href='https://loeasy68.github.io/api/index.html?html=<h1>Bank</h1><div id="result"></div><br><label>Change credit:</label><input id="newCredit"><button onclick="changeCredit()">Done</button><p>Credit: <label id="creditDis"></label><button onclick="sync()">Sync credit</button></p>&js=let credit = 0; creditDis.innerHTML = credit;function sync() { creditDis.innerHTML = localStorge.getItem("credit") } function changeCredit() { credit += parseInt(newCredit.value); creditDis.innerHTML = credit; localStorage.setItem("credit", credit);}'>Go here</a>
+<a href='https://loeasy68.github.io/api/index.html?html=<h1>Bank</h1><div id="result"></div><br><label>Change credit:</label><input id="newCredit"><button onclick="changeCredit()">Done</button><p>Credit: <label id="creditDis"></label></p>&js=let credit = 0; creditDis.innerHTML = credit;function changeCredit() { credit += parseInt(newCredit.value); creditDis.innerHTML = credit; localStorage.setItem("credit", credit);}'>Go here</a>
 `
             }
         }

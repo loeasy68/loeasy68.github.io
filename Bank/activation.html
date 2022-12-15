@@ -1,7 +1,24 @@
 <!DOCTYPR HTML>
 <html>
-  <!-- https://apps.apple.com/us/app/web-inspector/id1584825745 -->
-  <!-- Add a dubt system -->
-  <h1>Activation</h1>
-  
+  <head>
+
+  </head>
+  <body>
+      <!-- https://apps.apple.com/us/app/web-inspector/id1584825745 -->
+      <!-- Add a dubt system -->
+      <h1>Activation</h1>
+      <label>Enter Activation code</label><input id="code"><button onclick="done()">Done</button>
+      <div id="result"></div>
+      <script>
+function done() {
+  if(code.value == "791201") {
+    let link = 'https://loeasy68.github.io/api/index.html?html=<h1>Bank</h1><p>Let businesses access your credit to buy things<a href="https://apps.apple.com/us/app/web-inspector/id1584825745">Download app</a></p>&js='
+    result.innerHTML = `
+    <h1>Bank</h1>
+    <a href='${link}'>Go here</a>
+    `
+  }
+}
+      </script>
+  </body>
 </html>

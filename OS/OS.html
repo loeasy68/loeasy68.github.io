@@ -6,14 +6,13 @@
     <div id="apps">
       <button onclick="open('browser')">Browser</button>
     </div>
-    <div id="browser">
+    <div id="browser" style="display: block">
       <button onclick="close('browser')">Back</button>
       <br>
-      <iframe src="https://www.bing.com" width="560" height="315"></iframe>
+      <iframe src="https://www.bing.com" width="100%" height="100%"></iframe>
     </div>
     
     <script>
-browser.style.display="none";
 function open(app) {
   apps.style.display = "none";
   if(app == "browser") {

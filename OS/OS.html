@@ -7,14 +7,12 @@
       <button onclick="open('browser')">Browser</button>
     </div>
     <div id="browser">
-      <button onclick="close()">Back</button>
+      <button onclick="close('browser')">Back</button>
       <br>
-      <iframe src="https://www.bing.com"></iframe>
+      <iframe src="https://www.bing.com" width="560" height="315"></iframe>
     </div>
     
     <script>
-document.querySelectorAll("iframe").width = "560";
-document.querySelectorAll("iframe").width = "315";
 browser.style.display="none";
 function open(app) {
   apps.style.display = "none";
@@ -23,8 +21,10 @@ function open(app) {
   }
 }
 function close(app) {
-  browser.style.display = "none";
-  apps.style.display = "block";
+  if (app == "browser") {
+    browser.style.display = "none";
+    apps.style.display = "block";
+  }
 }
     </script>
   </body>

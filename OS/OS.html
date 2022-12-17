@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  </head>
+  <body>
+    <div id="apps">
+      <button onclick="open('browser')">Browser</button>
+    </div>
+    <div id="browser">
+      <button onclick="close()">Back</button>
+      <br>
+      <iframe src="https://www.bing.com"></iframe>
+    </div>
+    
+    <script>
+document.querySelectorAll("iframe").width = "560";
+document.querySelectorAll("iframe").width = "315";
+browser.style.display="none";
+function open(app) {
+  apps.style.display = "none";
+  if(app == "browser") {
+    browser.style.display = "block";
+  }
+}
+function close(app) {
+  browser.style.display = "none";
+  apps.style.display = "block";
+}
+    </script>
+  </body>
+</html>

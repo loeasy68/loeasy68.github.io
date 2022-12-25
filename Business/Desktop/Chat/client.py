@@ -5,9 +5,9 @@ import tkinter.scrolled
 from tkinter import simpledialog
 
 HOST = "0.0.0.0"
-PORT = "80000"
+PORT = 65535
 
-Class Client:
+class Client():
 
      def __init__(self, host, port):
 
@@ -28,7 +28,7 @@ Class Client:
           gui_thread.start()
           receive_thread.start()
 
-  def gui_loop(self):
+     def gui_loop(self):
        self.win = tkinter.Tk()
        self.win.configure(bg="lightgray")
 
@@ -58,13 +58,13 @@ Class Client:
 
        self.win.mainloop()
 
- def write(self):
-      message = f"{self.nickname}: {self.input_area.get('1.0', 'end')}"
-      self.sock.send(message.encode('utf-8'))
-      self.input_area.delete('1.0', 'end')
+     def write(self):
+       message = f"{self.nickname}: {self.input_area.get('1.0', 'end')}"
+       self.sock.send(message.encode('utf-8'))
+       self.input_area.delete('1.0', 'end')
       
 
- def stop(self):
+     def stop(self):
       self.running = False
       self.win.destroy()
       self.sock.close()
@@ -74,8 +74,9 @@ def receive(self):
      while self.running:
           try:
                message = self.sock.recv(1024)
-               if messgae == 'NICK':
-                    self.sock.send(self.nickname.encode('utf-8'))     else:
+               if message == 'NICK':
+                    self.sock.send(self.nickname.encode('utf-8'))     
+               else:
                     if self.gui_done:
                          self.text_area.config(state='normal')
                          self.insert('end', message)

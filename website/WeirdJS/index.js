@@ -42,4 +42,6 @@ map.C = `((()=>{})[${fromString('constructor')}](${fromString('return escape')})
 
 const compile = code => `(()=>{})[${fromString('constructor')}](${fromString(code)})()`;
 
-console.log(compile('console.log("Hello world!");'));
+const res = compile('console.log("Hello world!");');
+
+console.log(res);

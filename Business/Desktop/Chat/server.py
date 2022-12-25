@@ -2,9 +2,9 @@ import socket
 import threading
 
 HOST = "0.0.0.0"
-PORT = "80000"
+PORT = 65535
 
-server = socket.socket(socket.AF_INET, socket.SOCKET_STREAM)
+server = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 server.bind((HOST, PORT))
 
 server.listen()

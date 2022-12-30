@@ -1,6 +1,6 @@
 const name = prompt("Name of project:");
 function download() {
-    let blob = new Blob([`
+    let file = new File([`
     <!DOCTYPE html>
     <html>
         <head>
@@ -14,13 +14,33 @@ function download() {
         </head>
         <p>Not implemented</p>
     </html>
-    `], {
+    `], 
+    `${name}.html`,
+    {
         type: "text/plain;charset=utf-8"
     });
-    FileSaver.saveAs(blob, `${name}.html`);
+    saveAs(file);
+}
+function getBase64(file) {
+    var reader = new FileReader();
+    reader.readAsDataURL(file);
+    reader.onload = function () {
+      return reader.result
+    };
+    reader.onerror = function (error) {
+      return 'Error: ', error
+    };
+}
+function base64Page() {
+    jelluy().renderPage(`
+    <h1>Convert
+    `,`
+    
+    `)
 }
 jelluy().startSite(`
 <a class="waves-effect waves-light btn" onclick="download()">Export ${name}</a>
+<div class="box"></div>
 `,`
 <link rel="stylesheet" href="styles.css">
 <link rel="stylesheet" href="https://pyscript.net/latest/pyscript.css" /> 

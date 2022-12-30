@@ -33,13 +33,21 @@ function getBase64(file) {
 }
 function base64Page() {
     jelluy().renderPage(`
-    <h1>Convert
+    <h1>Convert file to base64</h1>
+    <input id="file" type="file">
+    <div id="result"></div>
     `,`
     
     `)
+    file.addEventListener("change", function() {
+        result.innerHTML = getBase64(file.value);
+    }
 }
 jelluy().startSite(`
+<div>
 <a class="waves-effect waves-light btn" onclick="download()">Export ${name}</a>
+</div>
+
 <div class="box"></div>
 `,`
 <link rel="stylesheet" href="styles.css">

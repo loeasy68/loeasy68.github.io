@@ -1,11 +1,11 @@
 const name = prompt("Name of project:")
 function downloadGame() {
-  // Make a game file  
+  // Make a game file
+  console.log("Worked")  
 }
 jelluy().startSite(`
-<a id="exportGame" class="waves-effect waves-light btn">Export ${name}</a>
 <div>
-<a class="waves-effect waves-light btn" onclick="download()">Export ${name}</a>
+<a id="exportGame" class="waves-effect waves-light btn" onclick="download()">Export ${name}</a>
 </div>
 <div class="box"></div>
 `,`

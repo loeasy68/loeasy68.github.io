@@ -3,14 +3,10 @@ function downloadGame() {
   // Make a game file  
 }
 jelluy().startSite(`
-<<<<<<< HEAD
 <a id="exportGame" class="waves-effect waves-light btn">Export ${name}</a>
-=======
 <div>
 <a class="waves-effect waves-light btn" onclick="download()">Export ${name}</a>
 </div>
-
->>>>>>> bad0c584eef5dbc8de60ece7e64506aceda610dd
 <div class="box"></div>
 `,`
 <link rel="stylesheet" href="styles.css">

@@ -19,6 +19,10 @@ function jelluy()
         element1.innerHTML = element1.innerHTML + body;
         element2.innerHTML = element2.innerHTML + head;
     },
+    appsView: (html) => {
+        var menu = document.getElementById("options")
+        menu.innerHTML = html;
+    },
   };
 
   return self;

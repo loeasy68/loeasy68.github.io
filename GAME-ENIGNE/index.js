@@ -26,7 +26,7 @@ function backgroundPage() {
        accept="image/png, image/jpeg">
   `)
   image.addEventListener("change", function() {
-    game.style.background = image.value;
+    game.style.backgroundImage = "url('" + image.value + "');";
   })
 }
 jelluy().startSite(`

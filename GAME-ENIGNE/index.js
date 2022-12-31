@@ -21,19 +21,27 @@ function downloadGame() {
 }
 function backgroundPage() {
   jelluy().renderPage(`
-  <h1>Background Page</h1>
+  <h1>Add a background</h1>
+  <input id="file" type="file">
   `, `
   
   `)
+  file.addEventListener("change", function() {
+    
+  })
+  
 }
 jelluy().startSite(`
+<div id="app">
 <div>
 <a id="exportGame" class="waves-effect waves-light btn">Export ${name}</a>
 <a id="background" class="waves-effect waves-light btn">Set a background image</a>
 <div id="link"></div>
 </div>
 
-<div class="box"></div>
+<div id="" class="box"></div>
+</div>
+<div id="background"></div>
 `,`
 <link rel="stylesheet" href="styles.css">
 <link rel="stylesheet" href="https://pyscript.net/latest/pyscript.css" /> 
@@ -44,7 +52,8 @@ jelluy().startSite(`
 `)
 background.addEventListener("click", function(e) {
   e.preventDefault()
-  backgroundPage()
+  app.style.display = "none"
+  
 })
 exportGame.addEventListener("click", function(e){
     e.preventDefault()

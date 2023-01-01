@@ -1,8 +1,10 @@
 const name = prompt("Name of project:")
+let codeValue = ""
 function backPage() {
   jelluy().appsView(`
   <a id="exportGame" class="waves-effect waves-light btn">Export ${name}</a>
   <a id="addSprite" class="waves-effect waves-light btn">Add a sprite</a>
+  <a id="code" class="waves-effect waves-light btn">Start coding</a>
   <div id="link"></div>
   `)
   addSprite.addEventListener("click", function(e) {
@@ -12,6 +14,10 @@ function backPage() {
   exportGame.addEventListener("click", function(e){
       e.preventDefault()
       downloadGame()
+  })
+  code.addEventListener("click", function(e) {
+    e.preventDefault()
+    codePage()
   })
 }
 function downloadGame() {
@@ -40,6 +46,9 @@ function downloadGame() {
       <div class="box">
         ${game.innerHTML}
       </div>
+      <py-script>
+        ${codeValue}
+      </py-script>
     </body>
   </html>
   `], "game.html", {type: "text/plain;charset=utf-8"}) 
@@ -79,7 +88,29 @@ function addSpritePage() {
   })
 }
 function codePage() {
-
+  jelluy().appsView(`
+  <textarea id="python" rows="30" cols="30"></textarea>
+  <a id="run" class="waves-effect waves-light btn">Run</a>
+  <a id="done" class="waves-effect waves-light btn">Save</a>
+  <a id="back" class="waves-effect waves-light btn">Back</a>
+  <div id="result"></div>
+  `)
+  back.addEventListener("click", function(e) {
+    e.preventDefault()
+    backPage()
+  })
+  done.addEventListener("click", function(e) {
+    e.preventDefault()
+    codeValue = python.value
+  })
+  run.addEventListener("click", function(e) {
+    e.preventDefault()
+    result.innerHTML = `
+    <py-script>
+      ${codeValue}
+    </py-script>
+    `
+  })
 }
 jelluy().startSite(`
 <div id="options">
@@ -93,15 +124,15 @@ jelluy().startSite(`
 `,`
 
 `)
-code.addEventListener("click", function(e) {
-  e.preventDefault()
-  codePage()
-})
 addSprite.addEventListener("click", function(e) {
   e.preventDefault()
   addSpritePage()
 })
 exportGame.addEventListener("click", function(e){
-    e.preventDefault()
-    downloadGame()
+  e.preventDefault()
+  downloadGame()
+})
+code.addEventListener("click", function(e) {
+  e.preventDefault()
+  codePage()
 })

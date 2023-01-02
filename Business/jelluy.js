@@ -4,7 +4,7 @@ function jelluy()
     startSite: (body, head) => {
         var element1 = document.querySelector('body');
         element1.innerHTML = body;
-        var element2 = document.querySelector('head');
+        var element2 = document.querySelector("head")
         element2.innerHTML = element2.innerHTML + head;
     },
     renderPage: (body,head) => {
@@ -18,6 +18,9 @@ function jelluy()
         var element2 = document.querySelector('head');
         element1.innerHTML = element1.innerHTML + body;
         element2.innerHTML = element2.innerHTML + head;
+    },
+    getServerSideProps: (js) => {
+      eval(js)
     },
   };
 

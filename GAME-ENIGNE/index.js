@@ -124,6 +124,7 @@ jelluy().startSite(`
 `,`
 
 `)
+
 addSprite.addEventListener("click", function(e) {
   e.preventDefault()
   addSpritePage()

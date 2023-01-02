@@ -23,6 +23,9 @@ function jelluy()
         var menu = document.getElementById("options")
         menu.innerHTML = html;
     },
+    getServerSideProps: (js) => {
+      eval(js)
+    },
   };
 
   return self;

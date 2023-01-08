@@ -1,3 +1,8 @@
+function question2() {
+    jelluy().renderPage(`
+    <h1>Worked</h1>
+    `)
+}
 function question1() {
     jelluy().renderPage(`
     <h1>This is a formation</h1>
@@ -14,10 +19,11 @@ function question1() {
             result.innerHTML = `
             <p>You did it!</p>
             <img src="./correctImgs/question1.png">
+            <button onclick="question2()">Next</button>
             `
         }
         else {
-            alert("Incorrect (Use lowercase)")
+            result.innerHTML = "<p>Incorrect (Use lowercase)</p>"
         }
     })
 }

@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "nodemon index.js"
+    "test": "echo \"No test spificed \"",
+    "start": "nodemon index.js"
   },
   "author": "Logan",
   "license": "ISC",

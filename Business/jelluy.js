@@ -19,9 +19,6 @@ function jelluy()
         element1.innerHTML = element1.innerHTML + body;
         element2.innerHTML = element2.innerHTML + head;
     },
-    getServerSideProps: (js) => {
-      eval(js)
-    },
   };
 
   return self;

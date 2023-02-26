@@ -7,10 +7,24 @@
     <h1>LoCDN - Libarrys</h1>
     <h2>Search One</h2>
     <input type="text" id="searchInput" list="search-list">
-    <button>Search</button>
+    <button onclick="search()">Search</button>
+    
+    <div id='res'></div>
     
     <datalist id="search-list">
       <option>Jelluy</option>
+      <option>FileSaver</option>
     </datalist> 
+    <script>
+      function search() {
+        let libraryURL = "https://loeasy68.gitthub.io/CDN/librarys/"
+        if(searchInput == 'Jelluy') {
+          res.innerHTML = libraryURL + "jelluy/jelluy.js"
+        }
+        if(searchInput == 'FileSaver') {
+          // Not Implemened
+        }
+      }
+    </script>
   </body>
 </html>

@@ -1,0 +1,22 @@
+.center-div {
+  height: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.left-div {
+  height: 35em;
+  width: 20em;
+  display: flex;
+  position: absolute;
+  left: 22em;
+  margin: 0;
+}
+.right-div {
+  height: 35em;
+  width: 20em;
+  display: flex;
+  position: absolute;
+  left: -22em;
+  margin: 0;
+}
